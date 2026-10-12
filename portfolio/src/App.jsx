@@ -22,12 +22,11 @@ const skills = [
     ],
   },
   { title: "Testing Tools", items: ["Selenium WebDriver", "TestNG", "Postman", "JMeter"] },
-  { title: "Microsoft & Tools", items: ["Power Apps", "Power Automate", "Dataverse", "Git", "GitHub", "VS Code", "Eclipse", "Builder.io", "MS Excel"] },
+  { title: "Microsoft & Tools", items: ["Git", "GitHub", "VS Code", "Eclipse", "MS Excel"] },
 ];
 
 const projects = [
   {
-    number: "01",
     title: "Learning Management System",
     type: "Academic Project",
     description:
@@ -42,7 +41,6 @@ const projects = [
     icon: "▤",
   },
   {
-    number: "02",
     title: "Airline Reservation System",
     type: "Academic Project",
     description:
@@ -55,6 +53,7 @@ const projects = [
     ],
     stack: ["Spring Boot", "React.js", "REST APIs", "MySQL"],
     icon: "✈",
+    plane: true,
   },
 ];
 
@@ -162,7 +161,7 @@ function App() {
         </section>
 
         <section className="section container about-section" id="about">
-          <div className="about-label"><span className="section-index">01 /</span><span>GET TO KNOW ME</span></div>
+          <div className="about-label"><span>GET TO KNOW ME</span></div>
           <div className="about-content">
             <SectionHeading eyebrow="A LITTLE ABOUT ME" title={<>Turning ideas into <span className="gradient-text">useful software.</span></>} />
             <div className="about-columns">
@@ -186,14 +185,13 @@ function App() {
         <section className="section skills-section" id="skills">
           <div className="container">
             <SectionHeading
-              eyebrow="02 / MY TOOLKIT"
+              eyebrow="MY TOOLKIT"
               title={<>Skills I bring to the <span className="gradient-text">table.</span></>}
               text="A mix of development, database, and testing skills to help build and deliver dependable applications."
             />
             <div className="skills-grid">
-              {skills.map((group, index) => (
+              {skills.map((group) => (
                 <article className="skill-card" key={group.title}>
-                  <div className="skill-card-top"><span className="skill-number">0{index + 1}</span><span className="skill-arrow">↗</span></div>
                   <h3>{group.title}</h3>
                   <div className="skill-tags">
                     {group.items.map((item) => <span className="skill-tag" key={item}>{item}</span>)}
@@ -206,7 +204,7 @@ function App() {
 
         <section className="section container experience-section" id="experience">
           <SectionHeading
-            eyebrow="03 / EXPERIENCE"
+            eyebrow="EXPERIENCE"
             title={<>Where I've <span className="gradient-text">grown.</span></>}
             text="Learning through practical work, collaboration, and solving application-level challenges."
           />
@@ -232,22 +230,21 @@ function App() {
           <div className="container">
             <div className="projects-heading">
               <SectionHeading
-                eyebrow="04 / SELECTED WORK"
+                eyebrow="SELECTED WORK"
                 title={<>Projects with a <span className="gradient-text">purpose.</span></>}
                 text="A look at applications I've built using Java full stack technologies."
               />
-              <span className="project-count">02 PROJECTS</span>
             </div>
             <div className="projects-grid">
               {projects.map((project) => (
-                <article className="project-card" key={project.number}>
+                <article className="project-card" key={project.title}>
                   <div className="project-visual">
-                    <span className="project-visual-index">{project.number} / PROJECT</span>
-                    <div className={`project-symbol ${project.number === "02" ? "plane-symbol" : ""}`}>{project.icon}</div>
+                    <span className="project-visual-index">PROJECT</span>
+                    <div className={`project-symbol ${project.plane ? "plane-symbol" : ""}`}>{project.icon}</div>
                     <div className="project-visual-caption"><span>JAVA FULL STACK</span><span>✳</span></div>
                   </div>
                   <div className="project-body">
-                    <div className="project-meta"><span>{project.type}</span><span>{project.number}</span></div>
+                    <div className="project-meta"><span>{project.type}</span></div>
                     <h3>{project.title}</h3>
                     <p>{project.description}</p>
                     <ul className="project-features">{project.features.map((feature) => <li key={feature}><span>↗</span>{feature}</li>)}</ul>
@@ -261,7 +258,7 @@ function App() {
         </section>
 
         <section className="section container education-section" id="education">
-          <SectionHeading eyebrow="05 / EDUCATION" title={<>The foundation <span className="gradient-text">behind the code.</span></>} />
+          <SectionHeading eyebrow="EDUCATION" title={<>The foundation <span className="gradient-text">behind the code.</span></>} />
           <div className="education-list">
             <article className="education-item">
               <div className="education-year">2025</div>
@@ -279,7 +276,7 @@ function App() {
         <section className="contact-section" id="contact">
           <div className="container contact-inner">
             <div className="contact-copy">
-              <span className="eyebrow">06 / WHAT'S NEXT?</span>
+              <span className="eyebrow">WHAT'S NEXT?</span>
               <h2>Let's build something <span className="gradient-text">meaningful.</span></h2>
               <p>I'm interested in opportunities where I can keep learning, contribute to a team, and turn ideas into working software.</p>
               <a className="button button-primary" href="mailto:gayatrishitole9696@gmail.com">Start a conversation <span>↗</span></a>

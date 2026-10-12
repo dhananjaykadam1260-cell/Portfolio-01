@@ -173,7 +173,7 @@ function App() {
 
             <span className="brand-mark">G</span>
 
-            <span>gayatri<span className="brand-dot">.</span></span>
+            <span> Gayatri <span className="brand-dot">.</span></span>
 
           </a>
 
@@ -609,7 +609,7 @@ function App() {
 
         <div className="container footer-inner">
 
-          <a className="brand footer-brand" href="#home"><span className="brand-mark">G</span><span>gayatri<span className="brand-dot">.</span></span></a>
+          <a className="brand footer-brand" href="#home"><span className="brand-mark">G</span><span>Gayatri<span className="brand-dot">.</span></span></a>
 
           <span>Designed with curiosity and built with React.</span>
 
